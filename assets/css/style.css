@@ -46,6 +46,11 @@ header li {
     float: left;
 }
 
+header li:nth-of-type(2){
+  border-left:1px solid #ccc;
+  border-right:1px solid #ccc;
+}
+
 header li a, header li a:visited {
     display: block;
     text-align: center;
@@ -143,13 +148,13 @@ footer p{
     color: #FFF;
 }
 
-.divider {
+/*.divider {
     position: relative;
     left: 907px;
     top: 7px;
-    width: 2px;
+    width: 25px;
     height: 25px;
-    
+    background-color:#FF0000;
     border-left: 1px solid #ccc;
 }
 
@@ -164,7 +169,7 @@ footer p{
 
 #div2{
 	left: 1013px;
-}
+}*/
 
 .active, .active:hover {
 	background-color: inherit;
