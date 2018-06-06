@@ -1,30 +1,4 @@
 
-/*Teal color (used for headings and backgrounds): #4aaaa5
-
-Regular font color (used for paragraphs and all text besides the headings): #777777
-
-Main header background color: #ffffff
-
-Main header border color: #cccccc
-
-Footer background color: #666666
-
-Main content background color: #ffffff
-
-Main content border color: #dddddd
-
-
-
-
-Fonts:
-
-
-For heading fonts use font-family: 'Georgia', Times, Times New Roman, serif;.
-For all other fonts use 'Arial', 'Helvetica Neue', Helvetica, sans-serif;.
-
-*/
-
-
 html, body{
 	width:100%;
 	height:100%;
@@ -79,11 +53,11 @@ header li a, header li a:visited {
     text-decoration: none;
     font-weight:300;
     color:#aaa;
+    transition: background-color 0.5s ease;
 }
 
-/* Change the link color to #111 (black) on hover */
 header li a:hover {
-    background-color: #4aaaa5;
+    background-color: #ED4A4E;
     color:#FFF;
     cursor:pointer;
 }
@@ -125,10 +99,11 @@ input[type="submit"]{
 	font-size:1.1rem;
 	padding:10px;
 	margin-top:1rem;
+	transition: background-color 0.5s ease;
 }
 
 input[type="submit"]:hover{
-	background-color:#ccc;
+	background-color:#ED4A4E;
 	cursor:pointer;
 }
 
@@ -138,19 +113,27 @@ footer,
 }
 
 footer{
-	background-color:#4aaaa5;
 	position: relative;
 }
 
 footer p{
 	position: absolute;
- 	bottom: 0;
+ 	bottom: 5px;
 	color:#ccc;
 	text-align:center;
-	line-height: 50px;
-	background-color: #666;
 	width:100%;
 	font-size:.75rem;
+	float:right;
+}
+
+.footer-top{
+	background-color:#4aaaa5;
+	height: 10px;
+}
+
+.footer-bottom{
+	background-color: #666;
+	height: 50px;
 }
 
 .branding{
@@ -161,9 +144,26 @@ footer p{
 }
 
 .divider {
-    position: absolute;
-    right:-1px;
-    top:2px;
+    position: relative;
+    left: 907px;
+    top: 7px;
+    width: 2px;
+    height: 25px;
+    
+    border-left: 1px solid #ccc;
+}
+
+.divider:nth-of-type(2) {
+    left: 1005px;
+    top: 31px;
+}
+
+#div1{
+	left:916px;
+}
+
+#div2{
+	left: 1013px;
 }
 
 .active, .active:hover {
@@ -210,9 +210,44 @@ footer p{
    margin: 1rem 3rem 2rem 0;
 }
 
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.port-image:hover .image {
+  opacity: 0.3;
+  box-shadow: 0 0 20px #000;
+}
+
+.port-image:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  color: #4aaaa5;
+  font-size: 16px;
+  padding: 16px 9px;
+}
+
 .port-image h2{
    position: absolute; 
-   top: 200px; 
+   top: 185px; 
    left: 0; 
    width: 300px;
    background-color: #4aaaa5;
@@ -220,6 +255,11 @@ footer p{
    font-size: 1.5rem;
    font-weight: 200;
    text-align: center; 
+   transition: .65s ease;
+}
+
+.port-image:hover h2{
+	display:none;
 }
 
 
