@@ -30,7 +30,7 @@ header{
 }
 
 header h2{
-	line-height: 90px;
+    line-height: 32px;
 }
 
 header ul {
@@ -38,15 +38,15 @@ header ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-  	line-height:62px;
-  	float:right;
 }
 
 header li {
     float: left;
+    padding: 30px 0;
+    transition: background-color 0.5s ease;
 }
 
-header li:nth-of-type(2){
+header li:nth-of-type(2) a{
   border-left:1px solid #ccc;
   border-right:1px solid #ccc;
 }
@@ -54,18 +54,26 @@ header li:nth-of-type(2){
 header li a, header li a:visited {
     display: block;
     text-align: center;
-    padding: 14px 16px;
+    padding: 6px 16px;
     text-decoration: none;
     font-weight:300;
     color:#aaa;
     transition: background-color 0.5s ease;
 }
 
-header li a:hover {
+header li:hover {
     background-color: #ED4A4E;
+}
+
+header li:hover a{
     color:#FFF;
     cursor:pointer;
 }
+
+header li:nth-of-type(2):hover a{
+    border-left:1px solid rgba(204,204,204,0);
+    border-right:1px solid rgba(204,204,204,0);
+  }
 
 hr{
 	border: none;
@@ -141,41 +149,33 @@ footer p{
 	height: 50px;
 }
 
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .branding{
-	float:left;
 	background-color:#4aaaa5;
-    padding: 0 2.5rem;
+    padding: 30px 2.5rem;
     color: #FFF;
 }
 
-/*.divider {
-    position: relative;
-    left: 907px;
-    top: 7px;
-    width: 25px;
-    height: 25px;
-    background-color:#FF0000;
-    border-left: 1px solid #ccc;
-}
-
-.divider:nth-of-type(2) {
-    left: 1005px;
-    top: 31px;
-}
-
-#div1{
-	left:916px;
-}
-
-#div2{
-	left: 1013px;
-}*/
-
 .active, .active:hover {
 	background-color: inherit;
+    cursor:default;
+}
+
+.active a, .active:hover a{
     color:#4aaaa5;
     cursor:default;
 }
+
+.keep-border, header li:hover .keep-border{
+    border-left:1px solid #ccc!important;
+    border-right:1px solid #ccc!important;
+}
+
 
 .content{
   min-height: 100%;
